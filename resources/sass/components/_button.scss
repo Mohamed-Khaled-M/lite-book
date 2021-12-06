@@ -1,0 +1,51 @@
+.btn {
+
+  &,
+  .btn:link,
+  .btn:visited {
+    padding: 1.8rem 2.3rem;
+    border-radius: $border-radius;
+    background: transparent;
+    outline: none;
+    cursor: pointer;
+    transition: $transition-time;
+    display: inline-block;
+    font-size: $default-font-size;
+    text-transform: capitalize;
+  }
+
+  &--pink {
+    background-color: $light-pink !important;
+    color: $white;
+    border: 1px solid $light-pink;
+
+    &:hover {
+      background-color: $dark-pink !important;
+      border: 1px solid $dark-pink;
+    }
+  }
+
+  &--white {
+    background-color: $white;
+    color: $black;
+  }
+
+  &--border {
+    border: 1px solid $light-pink;
+    color: $light-pink;
+
+    &:hover {
+      background-color: $dark-pink;
+      color: $white;
+      border: 1px solid transparent;
+    }
+  }
+
+  &--course {
+    display: block;
+    color: $light-pink;
+    padding: 3rem 0 0;
+    cursor: pointer;
+    transition: $transition-time;
+  }
+}

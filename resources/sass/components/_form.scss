@@ -1,0 +1,91 @@
+.form {
+  &__group {
+    margin-bottom: 2rem;
+  }
+
+  label {
+    font-size: 1.7rem;
+    color: $white;
+    display: inline-block;
+    margin-bottom: 1rem;
+  }
+
+  input,
+  textarea {
+    display: block;
+    padding: 2rem 2rem;
+    height: 5.5rem;
+    width: 100%;
+    background-color: $bg-light;
+    border: none;
+    border: 1px solid $border-color;
+    border-radius: $border-radius;
+    color: $white;
+    font-size: $default-font-size;
+    outline: none;
+
+    &:focus {
+      border: 1px solid $light-pink;
+    }
+  }
+
+  textarea {
+    height: 14rem;
+    resize: none;
+  }
+
+}
+
+.login-section {
+  .form {
+    input {
+      height: auto;
+      padding: 1rem 1.5rem;
+
+      &[type="checkbox"] {
+        display: inline-block;
+        width: auto;
+        height: auto;
+        margin-right: .5rem;
+      }
+    }
+
+    small {
+      opacity: 0;
+      color: #ff2c2c;
+      font-weight: bold;
+    }
+
+    .error {
+      input {
+        border: 1px solid #ff2c2c;
+      }
+
+      small {
+        opacity: 1;
+      }
+    }
+
+    .success {
+      input {
+        border: 1px solid $light-pink;
+      }
+    }
+  }
+}
+
+.leave-replay-section {
+  .form {
+    .d-sm-flex {
+      .form__group {
+        width: 48%;
+
+        @media (max-width: 576px) {
+          width: 100%;
+        }
+      }
+    }
+
+    input {}
+  }
+}

@@ -1,0 +1,36 @@
+.tabs {
+
+  &__buttons {
+    display: flex;
+    align-items: center;
+
+    &--btn {
+      flex: 1;
+      text-align: center;
+      font-size: 2.2rem;
+      padding: 1.5rem;
+      color: $white;
+      background-color: transparent;
+      border: none;
+      outline: none;
+      border-bottom: 2px solid $white;
+      cursor: pointer;
+
+      &.active {
+        color: $light-pink;
+        border-bottom: 2px solid $light-pink;
+      }
+    }
+  }
+
+
+  &__tab-content {
+    display: none;
+    color: $white;
+    font-size: 2rem;
+
+    &.active {
+      display: block;
+    }
+  }
+}

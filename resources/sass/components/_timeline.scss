@@ -1,0 +1,80 @@
+.timeline {
+  position: relative;
+
+  &__body {
+    &::before {
+      content: '';
+      height: 100%;
+      width: 0.5rem;
+      background-color: $white;
+      position: absolute;
+      left: 15%;
+      top: .5rem;
+      border-radius: $border-radius;
+    }
+  }
+
+  &__item {
+    position: relative;
+    padding-left: 20%;
+    padding-bottom: 2rem;
+    margin-bottom: 2rem;
+
+    &::before {
+      content: '';
+      height: 1.8rem;
+      width: 1.8rem;
+      background-color: $white;
+      border: 3px solid $light-pink;
+      border-radius: 50%;
+      position: absolute;
+      top: .5rem;
+      left: calc(15% - .6rem);
+    }
+
+    &--date {
+      font-weight: 500;
+      position: absolute;
+      top: 0;
+      left: 5%;
+
+      @media (max-width: 500px) {
+        left: 0;
+      }
+    }
+
+    &--content {
+
+      &--text {
+        padding-left: 1.5rem;
+        position: relative;
+
+        &::before {
+          content: "-";
+          position: absolute;
+          top: 50%;
+          left: 0;
+          transform: translateY(-50%);
+        }
+
+        a {
+          color: $light-pink;
+          border-bottom: 1px solid transparent;
+
+          &:hover {
+            border-bottom: 1px solid $light-pink;
+          }
+        }
+      }
+
+      &--image {
+        display: flex;
+
+        img {
+          border-radius: 50%;
+          width: 4rem;
+        }
+      }
+    }
+  }
+}

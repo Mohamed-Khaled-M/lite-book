@@ -1,0 +1,322 @@
+.study-section {
+  &__card {
+    background-color: $card-bg-color;
+    padding: 2.5rem 3rem;
+    border-radius: $border-radius;
+    transition: $transition-time;
+
+    &--img {
+      width: 100%;
+      display: block;
+      margin-bottom: 2rem;
+    }
+
+    &:hover {
+      box-shadow: $card-hover-box-shadow;
+    }
+  }
+}
+
+.subjects-section {
+  &__card {
+    background-color: $card-bg-color;
+    padding: 3rem;
+    border-radius: $border-radius;
+    border: 1px solid $border-color;
+    transition: $transition-time;
+
+    &:hover {
+      box-shadow: $card-hover-box-shadow;
+    }
+
+    img {
+      width: 100%;
+      border-radius: $border-radius;
+    }
+
+    .course-info {
+      display: block;
+      color: $light-pink;
+      border-top: 1px dotted $border-color-light;
+      border-bottom: 1px dotted $border-color-light;
+      margin: 1.5rem 0;
+      padding: 0.6rem 0;
+    }
+  }
+
+  .open,
+  .close {
+    text-align: center;
+    border-top: 1px dotted $border-color;
+  }
+
+  .close {
+    display: none;
+  }
+
+  .opened .close {
+    display: block;
+  }
+
+  .opened .open {
+    display: none;
+  }
+
+  .card-collapsed {
+    max-height: 0;
+    overflow: hidden;
+    transition: $transition-time;
+  }
+
+  .opened .card-collapsed {
+    margin-top: 5rem;
+  }
+
+  .course-details {
+
+    &__list {
+      padding-left: 1.8rem;
+
+
+      &--item {
+        color: $text-grey;
+        font-size: $default-font-size - .1;
+
+        &:not(:last-of-type) {
+          margin-bottom: 1rem;
+        }
+
+        img {
+          width: 1.5rem;
+          margin-top: 0.5rem;
+          margin-right: .5rem;
+        }
+      }
+    }
+  }
+}
+
+.state-section {
+  &__card {
+    border: 1px solid $border-color;
+    background-color: $card-bg-color;
+    transition: $transition-time;
+    border-radius: $border-radius;
+    padding: 2.2rem;
+
+    &:hover {
+      box-shadow: $card-hover-box-shadow;
+    }
+
+    &--number {
+      color: $light-pink;
+      font-size: 4rem;
+      margin-bottom: 1.5rem;
+      font-weight: 500;
+    }
+
+    .tertiary-heading {
+      font-size: 1.8rem;
+    }
+  }
+}
+
+.stay-updated-section {
+  &__card {
+    background-color: $card-bg-color;
+    padding: 3.5rem;
+    border-radius: $border-radius;
+    border: 1px solid $border-color;
+    max-width: 65rem;
+    margin: auto;
+  }
+
+  &__input {
+    border: 0;
+    border-radius: 6px;
+    color: #000;
+    width: 65%;
+    padding: 1.8rem 1.5rem;
+    outline: none;
+    font-size: 1.7rem;
+    margin-right: 1%;
+
+    &+.btn {
+      width: 30%;
+      padding: 1.8rem 0;
+    }
+  }
+}
+
+.education-section {
+  &__card {
+    background-color: $card-bg-color;
+    padding: 2.5rem 3rem;
+    border: 1px solid $border-color;
+    border-radius: $border-radius;
+
+    &:hover .education-section__card--icon {
+      margin-left: 90%;
+    }
+
+    &--icon {
+      color: $dark-pink;
+      font-size: 3.3rem;
+      display: inline-block;
+      transition: $transition-time;
+    }
+
+    .paragraph {
+      font-size: 1.4rem;
+    }
+  }
+}
+
+.team-section {
+  &__member {
+    background-color: $card-bg-color;
+    border-radius: $border-radius;
+    border: 1px solid $border-color;
+    overflow: hidden;
+    transition: $transition-time;
+
+    &:hover {
+      box-shadow: $card-hover-box-shadow;
+      transform: translateY(-1rem);
+    }
+
+    &--image {
+      position: relative;
+      height: 25rem;
+
+      img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        object-position: top;
+      }
+
+      a {
+        position: absolute;
+        bottom: 0;
+        right: 1rem;
+        transform: translateY(40%);
+        width: 3.5rem;
+        height: 3.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: $white;
+        border-radius: 50%;
+        background-color: #1DA1F2;
+
+        &:first-of-type {
+          right: 5.5rem;
+          background-color: #3B5998;
+        }
+
+      }
+    }
+
+    &--info {
+      padding: 2rem 1.5rem;
+    }
+  }
+}
+
+.login-section {
+  &__link {
+    color: $light-pink;
+    border-bottom: 1px solid $light-pink;
+    display: inline-block;
+  }
+
+  &__card {
+    width: 38rem;
+    max-width: 50rem;
+    height: 51.5rem;
+    margin: auto;
+    position: relative;
+    perspective: 150rem;
+
+    &--front,
+    &--back,
+    &--down {
+      background-color: $card-bg-color;
+      border-radius: $border-radius;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      padding: 3rem;
+      backface-visibility: hidden;
+      transition: $transition-time + .5;
+    }
+
+    &--back {
+      transform: rotateY(180deg);
+    }
+
+    &--down {
+      transform: rotateX(180deg);
+    }
+
+    &.rotateX {
+      .login-section__card--front {
+        transform: rotateY(180deg);
+      }
+
+      .login-section__card--back {
+        transform: rotateY(360deg);
+      }
+    }
+
+    &.rotateY {
+      height: 59rem;
+
+      .login-section__card--front {
+        transform: rotateX(180deg);
+      }
+
+      .login-section__card--down {
+        transform: rotateX(360deg);
+      }
+    }
+  }
+}
+
+.instructor-card {
+  background-color: $bg-dark;
+  border: 1px solid $border-color;
+  padding: 2.5rem;
+  border-radius: $border-radius;
+
+  img {
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .social {
+    a {
+      padding: 0.5rem;
+      color: $text-grey;
+      font-size: $default-font-size - .3;
+
+      &:not(:last-of-type) {
+        margin-right: 0.8rem;
+      }
+
+      &:hover {
+        color: $light-pink;
+      }
+    }
+  }
+
+  &__career {
+    font-size: 1.4rem;
+    color: #777;
+    display: inline-block;
+    text-transform: capitalize;
+  }
+}

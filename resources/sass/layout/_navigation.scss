@@ -1,0 +1,149 @@
+.navigation {
+  font-size: $default-font-size;
+  padding: 2rem 1rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 99;
+  transition: $transition-time;
+
+  &.bg {
+    background-color: $bg-light !important;
+  }
+
+  .logo {
+    font-size: 3rem;
+    font-weight: 600;
+    color: $light-pink;
+  }
+
+  &__list-container {
+    transition: $transition-time - .1;
+
+    @media (max-width: 991px) {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      height: 0;
+      overflow: hidden;
+
+      &.show {
+        background-color: $bg-light;
+      }
+    }
+  }
+
+  &__list {
+    display: flex;
+    column-gap: 3rem;
+    align-items: stretch;
+
+    @media (max-width: 991px) {
+      padding: 2rem;
+      flex-direction: column;
+      align-items: center;
+      row-gap: 3rem;
+    }
+
+    &--item {
+      color: $text-grey;
+      cursor: pointer;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+
+      @media (max-width: 991px) {
+        width: 100%;
+        display: block;
+      }
+
+      &.active {
+        color: $light-pink;
+
+        ul {
+          height: auto;
+          display: block;
+        }
+      }
+
+      &:hover {
+        color: $light-pink;
+      }
+
+      i {
+        margin-top: 0.5rem;
+        margin-left: .5rem;
+      }
+
+      ul {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        transform: translateY(113%);
+        background-color: $bg-light;
+        width: 20rem;
+        padding: 1rem 0;
+        border-radius: $border-radius;
+        text-align: left;
+        color: $text-grey;
+        box-shadow: $card-hover-box-shadow;
+        height: 0;
+        display: none;
+        overflow: hidden;
+
+        @media (max-width: 991px) {
+          position: relative;
+          transform: translateY(1rem);
+          width: 100%;
+
+          text-align: center;
+        }
+
+        li {
+          color: $text-grey;
+          cursor: pointer;
+
+          &:not(:last-of-type) {
+            margin-bottom: 1rem;
+          }
+
+          a {
+            padding: 1rem 2rem;
+          }
+
+          &.active {
+            background-color: $bg-dark;
+          }
+
+          &:hover {
+            color: $light-pink;
+          }
+        }
+      }
+    }
+
+    &--link,
+    a {
+      color: currentColor;
+      display: block;
+    }
+  }
+
+
+  &__menu-icon {
+    font-size: 2.5rem;
+    width: 4rem;
+    height: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: $border-radius;
+    background-color: $pink;
+    color: $white;
+    cursor: pointer;
+  }
+}

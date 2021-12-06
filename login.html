@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- META DESCRIPTION -->
+  <meta name="description" content="we have good things">
+  <!-- META KEYWORDS -->
+  <meta name="keywords" content="keywords here">
+  <!-- META AUTHOR -->
+  <meta name="author" content="mohamed khalid">
+  <title>liteBook</title>
+  
+  <link rel="icon" href="./resources/images/Book.ico">
+  <link rel="stylesheet" href="vendors/css/bootstrap-grid.min.css">
+  <link rel="stylesheet" href="vendors/css/all.min.css">
+  <link rel="stylesheet" href="resources/css/style.css">
+</head>
+
+<body>
+
+  <header class="secondary-header">
+    <nav class="navigation">
+      <div class="container d-flex justify-content-between align-items-center">
+        <h1>
+          <a href="index.html" class="logo"><i class="logo__icon far fa-edit"></i> liteBook</a>
+        </h1>
+
+        <div class="navigation__list-container">
+          <ul class="navigation__list">
+            <li class="navigation__list--item">
+              <a href="index.html" class="navigation__list--link">Home</a>
+            </li>
+
+            <li class="navigation__list--item">
+              <a href="about.html" class="navigation__list--link">About</a>
+            </li>
+
+            <li class="navigation__list--item dropdown-toggle">
+              Pages <i class="fas fa-angle-down"></i>
+              <ul>
+                <li><a href="courses.html">Courses</a></li>
+                <li><a href="course-single.html">Course single</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+              </ul>
+            </li>
+
+            <li class="navigation__list--item dropdown-toggle">
+              Blog <i class="fas fa-angle-down"></i>
+              <ul>
+                <li><a href="blog.html">Blog posts</a></li>
+                <li><a href="blog-single.html">Single post</a></li>
+              </ul>
+            </li>
+
+            <li class="navigation__list--item">
+              <a href="contact.html" class="navigation__list--link">Contact</a>
+            </li>
+
+            <li class="navigation__list--item active">
+              <a href="login.html" class="navigation__list--link">Login</a>
+            </li>
+
+          </ul>
+        </div>
+
+        <i class="navigation__menu-icon fas fa-bars d-flex d-lg-none"></i>
+      </div>
+    </nav>
+  </header>
+
+  <div class="path-heading text-center py-5">
+    <h2 class="secondary-heading mb-4">Login</h2>
+    <div class="path-heading__path">
+      <a href="index.html">Home</a>
+      &rarr;
+      <span>Login</span>
+    </div>
+  </div>
+
+  <main>
+    <div class="login-section">
+      <div class="login-section__card">
+
+        <form class="form login-section__card--front">
+          <div class="login-section__login">
+            <h3 class="tertiary-heading mb-5">Login to your Account</h3>
+            <div class="form__group">
+              <label for="login-email">Email</label>
+              <input type="email" id="login-email">
+              <small>message</small>
+            </div>
+
+            <div class="form__group">
+              <label for="login-password">Password</label>
+              <input type="password" id="login-password">
+              <small>message</small>
+            </div>
+
+            <div class="form__group d-flex justify-content-between align-items-center">
+              <label for="login-checkbox" class="mb-0">
+                <input type="checkbox" id="login-checkbox" checked>Remember me
+              </label>
+              <a href="#" class="login-section__link forgot-password-btn">Forgot password?</a>
+            </div>
+
+            <div class="form__group">
+              <input type="submit" value="Login" class="btn btn--pink py-4">
+            </div>
+
+            <p class="paragraph">
+              Dont have an account yet? <a href="" class="login-section__link sign-up-btn">Get it now</a>
+            </p>
+          </div>
+        </form>
+
+        <form class="form login-section__card--back">
+          <div class="login-section__forgot-password">
+            <h3 class="tertiary-heading mb-sm-5">Forgot Password</h3>
+            <p class="paragraph mb-4">Please enter the email address for your account. A verification code will be sent
+              to you. Once you have received the verification code, you will be able to choose a new password for your
+              account.</p>
+
+            <div class="form__group">
+              <label for="forgot-email">Email Address</label>
+              <input type="email" id="forgot-email">
+              <small>message</small>
+            </div>
+
+            <div class="form__group mb-5">
+              <input type="submit" value="Send Recovery Password" class="btn btn--pink py-4">
+            </div>
+
+            <a href="#" class="login-section__link back-home-btn">&larr; Back to home?</a>
+          </div>
+        </form>
+
+        <form class="form login-section__card--down">
+          <h3 class="tertiary-heading mb-5">Sign up now</h3>
+          <div class="form__group">
+            <label for="signup-name">Name</label>
+            <input type="text" id="signup-name">
+            <small>message</small>
+          </div>
+
+          <div class="form__group">
+            <label for="signup-email">Email</label>
+            <input type="email" id="signup-email">
+            <small>message</small>
+          </div>
+
+          <div class="form__group">
+            <label for="signup-password">Password</label>
+            <input type="password" id="signup-password">
+            <small>message</small>
+          </div>
+
+          <div class="form__group">
+            <input type="submit" value="Signup" class="btn btn--pink py-4">
+          </div>
+
+          <p class="paragraph">
+            Already Registered? <a href="" class="login-section__link login-btn">Login here</a>
+          </p>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="row footer__border section-padding">
+        <div class="col-lg-3 col-md-6 mb-5 mb-lg-0 px-4">
+          <h1 class="mb-4">
+            <a href="index.html" class="logo"><i class="logo__icon far fa-edit"></i> Literate</a>
+          </h1>
+          <p class="paragraph">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Expedita commodi eum qui!!
+          </p>
+          <ul class="footer__list mt-4">
+            <li>
+              <i class="fas fa-phone footer__list--icon"></i>
+              <a href="tel:12-3456-789">123-456-789</a>
+            </li>
+            <li>
+              <i class="far fa-clock footer__list--icon"></i>
+              Mon - Sat 8.00 - 18.00
+            </li>
+          </ul>
+        </div>
+
+        <div class="col-lg-5 col-md-6 mb-5 mb-lg-0 px-4">
+          <h3 class="tertiary-heading">Latest News</h3>
+          <a href="blog-single.html" class="footer__blog-title">
+            <img src="resources/images/b1.jpg" alt="blog">
+            <p class="paragraph">Learn by doing with Real World Projects Lorem, ipsum.<br>
+              <span class="footer__blog-title--date">
+                <i class="far fa-clock"></i> 02 Aug, 2021
+              </span>
+            </p>
+          </a>
+          <a href="blog-single.html" class="footer__blog-title">
+            <img src="resources/images/b2.jpg" alt="blog">
+            <p class="paragraph">Using Creative Problem Solving Lorem ipsum dolor sit.<br>
+              <span class="footer__blog-title--date">
+                <i class="far fa-clock"></i> 02 Aug, 2021
+              </span>
+            </p>
+          </a>
+          <a href="blog-single.html" class="footer__blog-title">
+            <img src="resources/images/b3.jpg" alt="blog">
+            <p class="paragraph">Learn by doing with Real World Projects Lorem, ipsum.<br>
+              <span class="footer__blog-title--date">
+                <i class="far fa-clock"></i> 02 Aug, 2021
+              </span>
+            </p>
+          </a>
+        </div>
+
+        <div class="col-lg-2 col-6 mb-5 mb-sm-0 px-4">
+          <h3 class="tertiary-heading">Company</h3>
+          <ul class="footer__list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="courses.html">Courses Offered</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-6 px-4">
+          <h3 class="tertiary-heading">Useful Links</h3>
+          <ul class="footer__list">
+            <li><a href="index.html">Case Studies</a></li>
+            <li><a href="index.html">Our Branches Us</a></li>
+            <li><a href="courses.html">Latest Media Offered</a></li>
+            <li><a href="about.html">About Company</a></li>
+            <li><a href="index.html">Our People</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="loading">
+    <div class="loader"></div>
+  </div>
+
+  <script src="resources/js/global.js"></script>
+  <script src="resources/js/login.js"></script>
+</body>
+
+</html>

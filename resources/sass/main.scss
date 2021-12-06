@@ -1,0 +1,24 @@
+@import "./abstract/variable";
+@import "./abstract/functions";
+@import "./abstract/mixin";
+
+@import "./base/base";
+@import "./base/utilities";
+@import "./base/typography";
+@import "./base/animation";
+
+@import "./components/button";
+@import "./components/card";
+@import "./components/testimonials";
+@import "./components/faq";
+@import "./components/courses";
+@import "./components/aside";
+@import "./components/tabs";
+@import "./components/timeline";
+@import "./components/form";
+
+@import "./layout/navigation";
+@import "./layout/header";
+@import "./layout/footer";
+
+@import "./pages/home";
